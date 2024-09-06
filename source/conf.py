@@ -10,7 +10,7 @@ project = "Blue Agave"
 author = "The MITRE Corporation"
 copyright_years = "2024"
 copyright = "test"
-prs_numbers = "[?]"
+prs_numbers = "23-0701"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
