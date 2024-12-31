@@ -63,8 +63,8 @@ Detailed setup instructions are in the Blue Agave BBX repository.  However, here
 5. Generate Activity Sets
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In BBX, choose a location for generated Activity Set files. Then start BBX.
-Several parameters can be configured in an associated YAML file, including how frequently BBX queries the Elastic database.
+In BBX, choose a directory for generated Activity Set files using the `--activity-set-dir` (or short-form, `-a`) command line argument for `bbx.py`. Then start BBX.
+Several parameters can be configured in an associated YAML file, including how frequently BBX queries the Elastic database. Point to your config file using the `--config`/`-c` flag; a sample config is available in `config/defulat.yml`. 
 
 BBX generates two types of files:
 
