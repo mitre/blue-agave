@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "blue-agave"
+version = "0.1.0"
+description = "Documentation for the Blue Agave system."
+authors = ["Your Name <you@example.com>"]
+license = "Apache License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "7.4.7"
+sphinx-autobuild = "^2024.4.16"
+sphinx-rtd-theme = "^2.0.0"
+invoke = "^2.2.0"
+ruff = "^0.6.0"
+types-invoke = "^2.0.0.10"
+
+[tool.ruff]
+select = ["E", "F", "W", "I"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

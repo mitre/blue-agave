@@ -1,0 +1,65 @@
+name: Build Site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  pull-requests: write
+
+# Prevent two builds (on the same branch) from executing at once
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+    - name: Install Poetry
+      run: curl -sSL https://install.python-poetry.org/ | python -
+    - name: Add Poetry to PATH
+      run: echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+    - name: Install Dependencies
+      run: poetry install
+    - name: Build Sphinx Documentation
+      run: poetry run invoke docs-ci
+    - name: Upload Sphinx Documentation
+      uses: actions/upload-artifact@v3
+      with:
+        name: blue-agave-documentation
+        path: build/dirhtml/
+
+  github_pages:
+    # This job only runs when committing or merging to main branch.
+    if: github.ref_name == 'main'
+    needs: docs
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: $\{\{ steps.deployment.outputs.page_url \}\}
+
+    steps:
+    - name: Setup Pages
+      uses: actions/configure-pages@v2
+    - name: Download Sphinx Documentation
+      uses: actions/download-artifact@v3
+      with:
+        name: blue-agave-documentation
+        path: docs
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./docs
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v1
