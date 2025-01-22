@@ -27,12 +27,12 @@ Sysmon configuration is crucial because it filters out many irrelevant events, s
 2. Setup an Elasticsearch Database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Several options exist, including installation on a local analysis host, cloud installation, and paying for a managed service. Instructions for a local Elastic installation using a Docker container are `here <https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html>`_.
+Several options exist, including installation on a local analysis host, cloud installation, and paying for a managed service. Instructions for a local Elastic installation using a Docker container are `here <https://www.elastic.co/guide/en/elasticsearch/reference/current/run-elasticsearch-locally.html>`__.
 
 3. Setup Winlogbeat to Forward Host Logs to Elasticsearch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Winlogbeat is the Elastic stack's log forwarder; it should be installed, configured and run on each host being logged. Winlogbeat's general installation and configuration instructions are `here <https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html>`_.
+Winlogbeat is the Elastic stack's log forwarder; it should be installed, configured and run on each host being logged. Winlogbeat's general installation and configuration instructions are `here <https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html>`__.
 
 Note that you'll need to configure Winlogbeat to look for Sysmon logs in particular (using the configuration "winlogbeat.event_logs: - name: Microsoft-Windows-Sysmon/Operational").
 You also need to configure Winlogbeat `to point to <https://www.elastic.co/guide/en/beats/winlogbeat/current/elasticsearch-output.html>`_ 
