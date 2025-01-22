@@ -3,7 +3,7 @@ name: Build Site
 on:
   push:
     branches: [main]
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -24,11 +24,17 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
       with:
-        python-version: '3.8'
+        python-version: '3.9'
     - name: Install Poetry
-      run: curl -sSL https://install.python-poetry.org/ | python -
-    - name: Add Poetry to PATH
-      run: echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+      uses: snok/install-poetry@v1
+      with:
+        version: 1.8.5
+    - name: Collect Error Logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: logs
+        path: /home/runner/work/**/*.log
     - name: Install Dependencies
       run: poetry install
     - name: Build Sphinx Documentation
