@@ -4,7 +4,7 @@ Setting up Rey
 Steps
 -----
 
-1. Download Code
+1. Download `Code <https://github.com/mitre/blue-agave-rey>`_
 2. Open Command Prompt in the root of the code directory
 3. Run ``npm install``
 4. Run ``npm run build``

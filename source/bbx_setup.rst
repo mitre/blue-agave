@@ -55,7 +55,8 @@ BBX and Rey's condensed visual format and multi-dimensional structure (i.e., org
 BBX queries events in the Winlogbeat index of the Elastic database in order to test alert rules, and then generates Activity Set graphs as JSON files.
 Detailed setup instructions are in the Blue Agave BBX repository.  However, here are the major steps:
 
-- Install BBX. It is convenient, but not necessary, to install BBX on the same server as Elasticsearch.
+
+- Download `Code <https://github.com/mitre/blue-agave-bbx>`_ and install BBX.  It is convenient, but not necessary, to install BBX on the same server as Elasticsearch.
 - Configure BBX to query the elastic database containing the events. You can edit the ``default.yml`` file.
 - Configure BBX's rules as needed for events of local interest. A default configuration is in ``cascade_rules.yml``
 - Configure BBX's whitelisting to ignore commonly occurring activity. The file `whitelist_rules.yml` has default settings.
