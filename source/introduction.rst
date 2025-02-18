@@ -57,6 +57,3 @@ Rey is a single-page web application (SPA) which runs completely in the browser,
 1. Opens one or more Activity Set files and renders them visually as a graph of nodes using a force-directed layout.
 2. Allows users to pan across and zoom in on specific regions of interest, select individual events or alert, and inspect their details (e.g., process ID, timestamp, command line), and zoom out to inspect features of the entire activity set.
 3. Allows users to study suspicious activity along various dimensions through a linked timeline.
-
-You can explore an instance of Rey with a demo activity set `Here
-<https://mitre.github.io/blue-agave-rey/?urls=https://raw.githubusercontent.com/mitre/blue-agave-rey/refs/heads/main/samples/activity_set_1.json>`_.

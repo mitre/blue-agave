@@ -1,0 +1,8 @@
+Acknowledgements
+----------------
+We gratefully acknowledge MITRE Corporation IR&D funding 
+provided by Dr. George Roelke and Dr. Stan Barr.
+BBX development was led by Steven Gianvecchio; Rey development was led by Michael Carenzo.
+Ken Smith was PI of the IR&D projects.
+Activity sets are modeled on an idea from the `CASCADE <https://github.com/mitre/cascade-server/>`_
+project led by Ross Wolf and Henry Foster.
