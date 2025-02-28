@@ -31,7 +31,7 @@ jobs:
         version: 1.8.5
     - name: Collect Error Logs
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: logs
         path: /home/runner/work/**/*.log
@@ -40,7 +40,7 @@ jobs:
     - name: Build Sphinx Documentation
       run: poetry run invoke docs-ci
     - name: Upload Sphinx Documentation
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: blue-agave-documentation
         path: build/dirhtml/
@@ -58,14 +58,14 @@ jobs:
     - name: Setup Pages
       uses: actions/configure-pages@v2
     - name: Download Sphinx Documentation
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: blue-agave-documentation
         path: docs
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./docs
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v4
