@@ -1,9 +1,9 @@
 Blue Agave
 ==========
 
-The vision of Blue Agave is to provide a powerful low-overhead
+Blue Agave is an *ATT&CK Graph Analysis and Visualization Environment* (AGAVE) for defenders.
+The vision of this project is to provide a powerful low-overhead
 defensive cyber detection and analysis capability.
-**Agave** stands for *ATT&CK Graph Analysis and Visualization Environment*.
 
 Blue Agave consists of two tightly coupled tools:  **BBX** and **Rey**.
 BBX is a python application that detects suspicious activity on network hosts,
@@ -35,6 +35,19 @@ or drill down to study the fine-grained details of any event.
    activity_sets
 
 
+Acknowledgements
+----------------
+We gratefully acknowledge MITRE Corporation IR&D funding 
+provided by Dr. George Roelke and Dr. Stan Barr.
+
+BBX development was led by Steven Gianvecchio; Rey development was led by Michael Carenzo.
+Ken Smith was PI of the IR&D projects.
+Activity sets are modeled on an idea from the `CASCADE <https://github.com/mitre/cascade-server/>`_
+project led by Ross Wolf and Henry Foster.
+Hongying Lan, Andrew Sillers, Alex Tsow and many others contributed significantly
+to the research development and testing of Blue Agave.
+
+
 Notice
 ------
 
@@ -46,15 +59,5 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 This project makes use of ATT&CK®: `ATT&CK Terms of Use
 <https://attack.mitre.org/resources/legal-and-branding/terms-of-use/>`__
-
-
-Acknowledgements
-----------------
-We gratefully acknowledge MITRE Corporation IR&D funding 
-provided by Dr. George Roelke and Dr. Stan Barr.
-BBX development was led by Steven Gianvecchio; Rey development was led by Michael Carenzo.
-Ken Smith was PI of the IR&D projects.
-Activity sets are modeled on an idea from the `CASCADE <https://github.com/mitre/cascade-server/>`_
-project led by Ross Wolf and Henry Foster.
 
 
