@@ -45,7 +45,7 @@ Ken Smith was PI of the IR&D projects.
 Activity sets are modeled on an idea from the `CASCADE <https://github.com/mitre/cascade-server/>`_
 project led by Ross Wolf and Henry Foster.
 Hongying Lan, Andrew Sillers, Alex Tsow and many others contributed significantly
-to the research development and testing of Blue Agave.
+to the research, development and testing of Blue Agave.
 
 
 Notice
